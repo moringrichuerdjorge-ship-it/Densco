@@ -20,7 +20,7 @@
   - License labels: truck reads "RCC & NJ Master Plumber / PA086164 / NJ13VH07899300"
   - Google Maps: paste an API key into GOOGLE_MAPS_API_KEY (bottom script) to enable Pegman / Street View + camera controls
   - Exact service-area towns; weekend hours
-  - Form handler: set the <form action> to your CRM / form service
+  - Lead form: GoHighLevel embed (form id pwNtX6XG3S3ZT14qhDju) — test a submission after each deploy
   - Photos: compress to WebP (~200 KB each) before going live
   - Town boundaries in data/service-areas.js come from OpenStreetMap (ODbL) — keep the attribution
 -->
@@ -149,29 +149,25 @@
       <div class="hero-form" id="quote">
         <h2 class="hero-form-title">Request Service</h2>
         <p class="hero-form-note">Tell us what's going on and we'll call you back to schedule.</p>
-        <!-- TODO: point action to your form handler / CRM (same as the contact form) -->
-        <form action="#" method="post">
-          <label for="hq-name">Name</label>
-          <input id="hq-name" name="name" type="text" autocomplete="name" required>
-          <label for="hq-phone">Phone</label>
-          <input id="hq-phone" name="phone" type="tel" autocomplete="tel" required>
-          <label for="hq-service">What do you need?</label>
-          <select id="hq-service" name="service">
-            <option>Drain cleaning / jetting</option>
-            <option>Video pipe inspection</option>
-            <option>Sump pump / basement water</option>
-            <option>Water heater</option>
-            <option>Sewage ejector pump</option>
-            <option>Faucet or fixture</option>
-            <option>Sewer line replacement</option>
-            <option>Interior sewer / drain line</option>
-            <option>Something else</option>
-          </select>
-          <label for="hq-details">Details (optional)</label>
-          <textarea id="hq-details" name="details" rows="2" placeholder="e.g. Basement floor drain is backing up"></textarea>
-          <button class="cta hero-form-btn" type="submit">Get a Call Back</button>
-          <p class="hero-form-fine">No spam. We only use your info to contact you about this job.</p>
-        </form>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/pwNtX6XG3S3ZT14qhDju"
+          id="inline-pwNtX6XG3S3ZT14qhDju"
+          class="hero-form-embed"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Densco Plumbing Lead Form"
+          data-height="944"
+          data-layout-iframe-id="inline-pwNtX6XG3S3ZT14qhDju"
+          data-form-id="pwNtX6XG3S3ZT14qhDju"
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="Densco Plumbing Lead Form"></iframe>
+        <p class="hero-form-fine">No spam. We only use your info to contact you about this job.</p>
       </div>
     </div>
   </section>
@@ -476,6 +472,7 @@
   <a class="quote" href="#quote">Schedule Service</a>
 </div>
 
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 <script src="data/service-areas.js"></script>
 <script src="js/app.js"></script>
 </body>

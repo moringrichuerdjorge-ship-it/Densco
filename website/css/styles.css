@@ -601,15 +601,12 @@ h1, h2, .rv-heading, .city-head h2, .need h2 { font-family: "Oswald", "Montserra
 .need-btn { padding: 14px 26px; font-size: 1rem; }
 @media (max-width: 860px) { .need { padding: 36px 0 40px; } .need-row { gap: 18px; } .need-logo img { max-width: 190px; } .need-sub { margin-bottom: 18px; } }
 /* Hero form (right column) */
-.hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; align-items: center; }
-.hero-form { position: relative; z-index: 2; background: #fff; color: #232021; border-radius: 16px; padding: 26px 26px 22px; box-shadow: 0 24px 50px rgba(35,32,33,.45); border-top: 6px solid #49b9ed; max-width: 440px; justify-self: end; width: 100%; }
+.hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; align-items: start; }
+.hero-form { position: relative; z-index: 2; background: #fff; color: #232021; border-radius: 16px; padding: 22px 18px 18px; box-shadow: 0 24px 50px rgba(35,32,33,.45); border-top: 6px solid #49b9ed; max-width: 460px; justify-self: end; width: 100%; }
 .hero-form-title { font: 700 1.7rem/1.1 "Oswald", sans-serif; color: #232021; margin: 0 0 4px; }
 .hero-form-note { font-size: .92rem; color: rgba(35,32,33,.75); margin: 0 0 14px; }
-.hero-form label { display: block; font-size: .8rem; font-weight: 700; color: #232021; margin-bottom: 4px; }
-.hero-form input, .hero-form select, .hero-form textarea { width: 100%; padding: 10px 12px; border: 1px solid rgba(35,32,33,.22); border-radius: 8px; font: inherit; font-size: .98rem; margin-bottom: 10px; background: #fff; color: #232021; }
-.hero-form textarea { resize: vertical; min-height: 56px; }
-.hero-form input:focus, .hero-form select:focus, .hero-form textarea:focus { outline: 3px solid #49b9ed; border-color: #49b9ed; }
-.hero-form-btn { width: 100%; margin-top: 4px; border: 0; cursor: pointer; }
+/* form_embed.js overwrites the inline height once it measures the form; this is the pre-script fallback */
+.hero-form-embed { display: block; width: 100%; height: 944px; border: 0; border-radius: 8px; }
 .hero-form-fine { font-size: .75rem; color: rgba(35,32,33,.65); text-align: center; margin: 10px 0 0; }
 @media (max-width: 1000px) { .hero-grid { grid-template-columns: 1fr; gap: 32px; } .hero-form { justify-self: stretch; max-width: 560px; } }
 /* Why Locals Trust Us: black-and-white icons, white labels, no descriptions */
